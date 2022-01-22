@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./style.scss"
 
 const HeadLine = ({heading}) => {
@@ -15,6 +16,9 @@ return (
     </section>
     </>
 )
+}
+HeadLine.propTypes = {
+    heading:PropTypes.string
 }
 
 export default HeadLine;
