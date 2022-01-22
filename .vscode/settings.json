@@ -1,0 +1,5 @@
+{
+    "editor.suggest.showStatusBar": true,
+    "eslint.alwaysShowStatus": true,
+    "problems.showCurrentInStatus": true
+}
