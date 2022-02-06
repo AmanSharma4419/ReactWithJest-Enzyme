@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import HeadLine from ".";
+import HeadLine from "./index";
 import {findComponent,checkProps}   from "../../Utils/index"
 
 function componentSetup(props) {
@@ -19,7 +19,9 @@ describe("Headline component", () => {
     expect(propsErr).toBeUndefined()
 })
 })
-    describe ("Have props", () => {
+
+
+describe ("Have props", () => {
         let component;
         beforeEach (() => {
             const props = {
@@ -45,7 +47,9 @@ describe("Headline component", () => {
     
     })
 
-    describe ("Have no props",() => {
+
+
+describe ("Have no props",() => {
         let component;
         beforeEach (() => {
             component = componentSetup()
