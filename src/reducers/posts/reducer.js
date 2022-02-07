@@ -1,10 +1,12 @@
 import {types} from "../../actions/types"
-
-export default (state = [], action) =>{
+const initialState = {
+  posts : []
+}
+export default (state = initialState , action) =>{
   switch(action.type){
       case types.GET_POSTS:
-          return action.payload;
-          default:
-              return state
+          return {...state, posts:action.payload}
+      default:
+          return state;
   }
 }

@@ -41,4 +41,19 @@ describe("List Component", () => {
         const description = findComponent (component,"description-list")
         expect(description.length).toBe(1)
     })
+    describe("Should not render", () => {
+        let component;
+        beforeEach(() => {
+            const expectedProps = {
+                desc:"testing desc"
+            }
+            component =  componentSetup(expectedProps);
+        })   
+        it ("Should not render the component", () => {
+            const componentList = findComponent(component,"title-list")
+            expect(componentList.length).toBe(0)
+             })
+     })
+
+       
 })

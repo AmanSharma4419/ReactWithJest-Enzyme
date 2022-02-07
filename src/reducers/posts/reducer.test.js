@@ -4,7 +4,9 @@ import postReducer from "../../reducers/index"
 describe("Posts reducer",() => {
     it("Should return default state", () => {
         const newState = postReducer(undefined,{})
-        expect(newState).toEqual({"posts": []})
+        expect(newState).toEqual({"posts": {
+            posts : []
+          }})
     })
 
     it("Should return new state if action type matched",() => {
@@ -13,6 +15,8 @@ describe("Posts reducer",() => {
             type: types.GET_POSTS,
             payload:posts
         })
-        expect(newState).toEqual({"posts":posts})
+        expect(newState).toEqual({"posts":{
+            posts : posts
+          }})
     })
 })

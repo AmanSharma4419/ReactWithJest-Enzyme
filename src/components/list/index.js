@@ -5,9 +5,11 @@ class List extends React.Component {
     constructor(props) {
         super(props)
     }
-
     render() {
         const {title,description} =  this.props;
+        if (!title) {
+            return null;
+        }
         return (
             <>
             <section data-test="section-list">

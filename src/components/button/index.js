@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Button = () => {
+const Button = (props) => {
     return (
         <div>
-            <button className="btn-click-here" data-test="btn-btn-click">Click here</button>
+            <button className="btn-click-here" data-test="btn-btn-click" onClick={()=>{props.eventEmit()}} >{props.title}</button>
         </div>
     )
 }
+
 Button.propTypes = {
     title:PropTypes.string,
     emitEvent : PropTypes.func
